@@ -22,6 +22,7 @@ public class Post {
         this.titolo = titolo;
         this.contenuto = contenuto;
         this.tempoDiLettura = tempoDiLettura;
+        this.cover = "https://picsum.photos/200/300";
         Random random = new Random();
         this.id = random.nextInt(1,100);
     }
