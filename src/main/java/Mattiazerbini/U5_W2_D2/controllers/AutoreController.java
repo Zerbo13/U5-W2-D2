@@ -26,14 +26,14 @@ public class AutoreController {
         return this.autoreService.findAll();
     }
 
-    //RITORNA UN SINGOLO AUTORE (GET) http://localhost:3001/users/{userId}
+    //RITORNA UN SINGOLO AUTORE (GET)
     @GetMapping("/{idAutore}")
     public Autore getAutoreById(@PathVariable long idAutore) {
         return this.autoreService.findById(idAutore);
     }
 
 
-    //CREAZIONE DI UN NUOVO AUTORE (POST) http://localhost:3001/users (+payload)
+    //CREAZIONE DI UN NUOVO AUTORE (POST)
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED) // 201
     public Autore createAutore(@RequestBody AutorePayload payload) {
@@ -42,13 +42,13 @@ public class AutoreController {
 
 
 
-    //MODIFICA LO SPECIFICO AUTORE (PUT) http://localhost:3001/users/{userId} (+payload)
+    //MODIFICA LO SPECIFICO AUTORE (PUT)
     @PutMapping("/{idAutore}")
     public Autore getAutoreByIdAndUpdate(@PathVariable long idAutore, @RequestBody AutorePayload payload) {
         return this.autoreService.findByIdAndUpdate(idAutore, payload);
     }
 
-    //ELIMINA LO SPECIFICO AUTORE (DELETE) http://localhost:3001/users/{userId}
+    //ELIMINA LO SPECIFICO AUTORE (DELETE)
     @DeleteMapping("/{idAutore}")
     @ResponseStatus(HttpStatus.NO_CONTENT) // 204
     public void getAutoreByIdAndDelete(@PathVariable long idAutore) {

@@ -50,7 +50,7 @@ public class PostController {
         return this.postService.findByIdAndUpdate(idPost, payload);
     }
 
-    //ELIMINA LO SPECIFICO POST (DELETE) 
+    //ELIMINA LO SPECIFICO POST (DELETE)
     @DeleteMapping("/{idPost}")
     @ResponseStatus(HttpStatus.NO_CONTENT) // 204
     public void getAPostByIdAndDelete(@PathVariable long idPost) {
